@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2849/2849457.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Asap:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #2f3f43, #04172e);
+            color: #fff;
+        }
+        .weather-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+        }
+        
+        *{
+            font-family: "Asap Condensed", sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Left-->
+            <div class="col-md-8">
+                <div class="weather-card p-4 text-center">
+                    <h1 class="mb-4" style="color: rgb(74, 98, 138);">WEATHER FORECAST</h1>
+                    <div class="mb-4">
+                        <img src="https://img.freepik.com/premium-vector/rainy-empty-tile-place-your-content-weather-forecast-app-website-cloud-lightning-thunderstorm-autumn-downpour-overcast-wind-temperature-precipitation-degrees-celsius-fahrenheit_661108-23605.jpg" class="rounded" alt="weatherimg" width="100%" height="400px">
+                    </div>
+                    <div id="left">
+                      <!-- <h2 class="display-4">31.9°C</h2>
+                    <p class="lead">Haze - Feels like 38.9°C</p>
+                    <p>Kakkanad</p>
+                    <p>Fri May 17 2024 11:00:05 GMT +0530 (India Standard Time)</p> -->
+                    <div id="suggestion">
+                       
+                    </div>
+                    
+                   
+                    </div>
+                </div>
+            </div>
+
+            <!-- Result -->
+            <div class="col-md-4">
+                <div class="weather-card shadow">
+                    <div id='cityid'>
+
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" id="cityname" class="form-control" placeholder="Enter cityname" aria-label="Search">
+                        <div class="d-flex justify-content-end mt-2">
+                        <button class="btn btn-success me-2" onclick="weatherapp()">Search</button>
+                        <button class="btn btn-danger" onclick="refreshWeather()">Refresh</button>
+                        </div>
+                        
+                        <div id="result"  class="p-2 mt-2">
+                        <!-- <h5>Weather Details</h5>
+                        <p><strong>Country:</strong> IN</p>
+                        <p><strong>Humidity:</strong> 70%</p>
+                        <p><strong>Wind:</strong> 1.54 Kmph</p>
+                        <p><strong>Pressure:</strong> 1009</p> -->
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./weather.js">
+  
+    </script>
+</body>
+</html>
+
